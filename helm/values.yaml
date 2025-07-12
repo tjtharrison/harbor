@@ -121,17 +121,18 @@ k8s-backer-upper:
   backupService: postgres
 
 harbor:
-  externalURL: "https://harbor.tjth.co"
+  externalURL: "https://oci.tjth.co"
   expose:
     type: ingress 
+    certSource: "none"
     ingress:
       className: cilium
       hosts:
-        core: harbor.tjth.co
+        core: oci.tjth.co
         notary: notary.tjth.co
       annotations: 
         cert-manager.io/cluster-issuer: letsencrypt-cloudflare
-        external-dns.alpha.kubernetes.io/hostname: harbor.tjth.co
+        external-dns.alpha.kubernetes.io/hostname: oci.tjth.co
   imagePullSecrets:
     - name: registry-harbor
   database:
