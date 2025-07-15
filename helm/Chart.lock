@@ -1,12 +1,12 @@
 dependencies:
 - name: helm-charts
   repository: oci://oci.tjth.co/ghcr/tjtharrison
-  version: 1.16.2
+  version: 1.17.1
 - name: harbor
   repository: https://helm.goharbor.io
   version: 1.17.1
 - name: k8s-backer-upper
   repository: oci://oci.tjth.co/ghcr/tjtharrison
   version: 1.3.0
-digest: sha256:e97549cfb9788766ffbf60092c32a7ea59afc227bfc6edbf5f224ff63adf505a
-generated: "2025-07-12T21:57:37.927665+01:00"
+digest: sha256:a6157e7f47b6b1ad21005a0e4ae6b4e0cb97df395da7433ea9dd92768daf7e3f
+generated: "2025-07-15T10:21:36.835428428Z"
