@@ -13,6 +13,6 @@ dependencies:
     alias: harbor
     version: 1.17.1
     repository: https://helm.goharbor.io
-  - name: k8s-backer-upper
-    version: 1.3.0
-    repository: oci://oci.tjth.co/ghcr/tjtharrison
+  # - name: k8s-backer-upper
+  #   version: 1.3.0
+  #   repository: oci://oci.tjth.co/ghcr/tjtharrison
