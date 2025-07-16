@@ -1,0 +1,150 @@
+name: harbor
+namespace: harbor
+helm:
+  name: harbor
+  namespace: harbor
+  deployments:
+    - name: db
+      image: postgres:17.5
+      replicas: 1
+      ports:
+        - containerPort: 5432
+          protocol: TCP
+          name: db
+      liveness: 
+        enable: "False"
+      readiness:
+        enable: "False"
+      resources:
+        requests:
+          cpu: 50m
+          memory: 100M
+        limits:
+          cpu: 150m
+          memory: 200M
+      volume_mounts:
+        - name: db-storage-nfs
+          mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: db-storage-nfs
+          claimName: db-storage-nfs
+      env:
+        - name: PGDATA
+          value: "/var/lib/postgresql/data/harbor"
+      args: []
+      configMounts: []
+      secretMounts: []
+      envSecrets:
+        - name: POSTGRES_PASSWORD
+          secretName: database-credentials
+          secretKey: POSTGRES_PASSWORD
+        - name: POSTGRES_USER
+          secretName: database-credentials
+          secretKey: POSTGRES_USER
+        - name: POSTGRES_DB
+          secretName: database-credentials
+          secretKey: POSTGRES_DB
+      securityContext:
+        capabilities:
+          add: []
+      command: []
+    - name: redis
+      image: redis:7.4.4
+      replicas: 1
+      ports:
+        - containerPort: 6379
+          protocol: TCP
+          name: redis
+      liveness:
+        enable: "False"
+      readiness:
+        enable: "False"
+      resources:
+        requests:
+          cpu: 50m
+          memory: 100M
+        limits:
+          cpu: 150m
+          memory: 200M
+      volume_mounts:
+        - name: redis-storage-nfs
+          mountPath: /data
+      volumes:
+        - name: redis-storage-nfs
+          claimName: redis-storage-nfs
+      envSecrets: []
+      securityContext:
+        capabilities:
+          add: []
+      command: []
+      env: []
+      args: []
+      configMounts: []
+      secretMounts: []
+      envSecrets: []
+  services:
+    - name: postgres
+      type: ClusterIP
+      ports:
+        - port: 5432
+          protocol: TCP
+          name: postgres
+      selector:
+        app: db
+      annotations: []
+    - name: redis
+      type: ClusterIP
+      ports:
+        - port: 6379
+          protocol: TCP
+          name: redis
+      selector:
+        app: redis
+      annotations: []
+  pvc: []
+  nfs:
+    - name: db-storage-nfs
+      storage: 1Gi
+    - name: redis-storage-nfs
+      storage: 100Mi
+      
+k8s-backer-upper:
+  schedule: "0 20 * * *"
+  namespace: harbor
+  imagePullSecret: registry-harbor
+  secretName: database-credentials
+  sshSecretName: backup-ssh-key
+  remote:
+      user: backupuser # The user to use to connect to the remote host
+      host: 192.168.0.200 # The remote host to connect to
+      path: /data/server-backups/harbor
+  backupService: postgres
+
+harbor:
+  externalURL: "https://oci.tjth.co"
+  expose:
+    type: ingress 
+    certSource: "none"
+    ingress:
+      className: cilium
+      hosts:
+        core: oci.tjth.co
+        notary: notary.tjth.co
+      annotations: 
+        cert-manager.io/cluster-issuer: letsencrypt-cloudflare
+        external-dns.alpha.kubernetes.io/hostname: oci.tjth.co
+  imagePullSecrets:
+    - name: registry-harbor
+  database:
+    type: external
+    external:
+      host: postgres.harbor.svc.cluster.local
+      port: 5432
+      username: harbor
+      existingSecret: database-credentials
+      coreDatabase: "harbor"
+  redis:
+    type: external
+    external:
+      addr: redis.harbor.svc.cluster.local:6379
+      port: 6379
