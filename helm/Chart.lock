@@ -1,9 +1,9 @@
 dependencies:
 - name: helm-charts
   repository: oci://oci.tjth.co/ghcr/tjtharrison
-  version: 1.16.2
+  version: 1.17.1
 - name: harbor
   repository: https://helm.goharbor.io
   version: 1.17.1
-digest: sha256:09acef8ce4c6a67d94812f254f8b41f5b5dc475d769172e1061b4f6ea7886781
-generated: "2025-07-16T21:58:16.566101+01:00"
+digest: sha256:d03ae7b0a18f7d7390a13ba8c7e71e149a979ab91b2024ae53a7b41f5f9be8dc
+generated: "2025-07-18T10:12:04.274531003Z"
