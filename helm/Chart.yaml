@@ -7,7 +7,7 @@ appVersion: "0.27.6"
 dependencies:
   - name: helm-charts
     alias: helm
-    version: 1.16.2
+    version: 1.17.1
     repository: oci://oci.tjth.co/ghcr/tjtharrison
   - name: harbor
     alias: harbor

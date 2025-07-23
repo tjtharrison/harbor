@@ -4,7 +4,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: prod-harbor-core
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -18,19 +18,19 @@ metadata:
 type: Opaque
 data:
   secretKey: "bm90LWEtc2VjdXJlLWtleQ=="
-  secret: "RUJzMWNWOFpzMVBKRlhGdQ=="
-  tls.key: "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBdUdZbGJ5OFlXVzltdzZ2aGhFTUtyYUNTVVk5VUVPS3V4THJmb3grR053Z0k4N01TCmRlWnVzcWZBMTZjV2plNGJhZis2cmFtZFE1aGl6TEt5eEpublU3bGJlNEtSVjZydFVUeWE2Q0I0MXNEZWVZcXkKTFZaR1RnOXIxT0E3cENrVnIyaytaZS9sSGVrdUdmYy9jZVRnR2NlSThYQ2FSS0RHc2FzMjc5WkpkdXpEU1NEawp6STYxSjMxQXIrMHUzU3h2YmNSbXp1OFRCcDFUTktBS3M0eHltbDF5MDRRbEhub3h6dWFlek51WDluY0t4SU1kCmxZOWF4cDhQME5Wd3doeVpKRU9qQXd2SzJmcmNVVkVueDdrVW9WekJaMWYvMXZqWEZsRmh0Y1dxRmhOMjVWaGQKdDNqWDhPTGZkYTk4Wlg2bXdKRWNjN3kxNXVEY0U2UmEvRXRYTndJREFRQUJBb0lCQUFqbzBvMDFNdEY3YXZVdwpWRlNlSXFGeC9TL1lvNEN2V3k5aE1oWUJHMnlFUkY1MS9BSGJVT1RyNndyZ1pWd1ZNWmpsQk1HSVRQTnJwUFpyCitldzYzV3p6cTBKajlCN093T21vYW5tbHZBRHdUNitDcm9vM1BXMWZIR0FzTjJWK29MQVpmeXpRc3ZySGZmVSsKTjRBS3hYTXBhMm55L1Zrc2hYMG5IeC9tZENVOVJVdFZUdC83Z1lCWlZQd21NV29jaEFWMVdHdThwUVN3dFllNgpxOEFHSUpGczl4VUUyQ0RRenhiSTdzcm1DWFNzak1YcXBFbUxoTERSSVRJZmZ1WE5NKzlMQ21jNFhzTHJRS0dvCjE5dFlJNTA5OVdTd29vY2JtSzl4L1YwZmx0Rmo3S2VTTjBKMUpQOEFyZkVKbzg4T2x1MUUzaVJHY29UNm5TcisKRSswOEt5a0NnWUVBenplMTRnVFFrN2NGYXhrWkNKZGh6YWNzTDVTUDc2RFM1ZjFQcW1tNmhNMlJ5SVhiQnNQYQpiOFQwb2V0UWYwOXJOMEt2TWtXN0o4UGhDWjdNcXNEd1ZLRVJ6QVBrNXFJMmovK0NqbWNsMkVLR3FSTlpkdmtJCmxHZGg5YWlYTnFDd2x0L0NyeDdXeW1JcExGWC8rYnN6Z3M0UVJQSVp5V0U4THFvQ0tWaHAydmtDZ1lFQTQ4ODgKcTBmdktrM0NFSkZ3SXkwRWpERWUxYTRqYWFCRHdsb3UwNW1WdXpudmVzUlpXZ3ZOenNPNmV3UFdBeUZkeEt5dQo2bDN6eW9lMWFiekFTd05qV0dhb2JQSVN1TWVzRkorZnFwOXUrc1h6TUZQVWpzb2ZBYU9hUkJCV21KR1Uvd2JaCktYZjZsVjRWQlNwUGI5bytYalZoUFBUL09nVHMwaVlSQ25IZW42OENnWUVBelZib2ZzdkVvTXc1cTFKWWswSG4KNGpIcHdGQ1lmWjVCdnpUUXNBOUxqSFJsSlc4M2h6R25rU0I4UnNQM3BlRGVYd2xPc1NPV2ZhWkdweERjd2N5bAptMGR0YWx6bGhJSjBUU2VtaVZTL2xOai90aVg5ZnI3eStKU2w1eGlrbDdhT3AwT2ZHWWdXMHNDSkNtMUNWb2RpCldSbTMxNHFOY1JoUTJmRVFhVVk2eDRrQ2dZRUF2VWpXU2lNTkVBTm4ra2c5K3B4UEtRVXZiN0N2Yi9aZ0ZyN0UKSmNGNWJnV25mRVJsVWJKNUlSSDBnbjRmZHA1a3dTUVNlbDN5VVJnTm5udmM4dmN2dHFZbHo5QWJ5amp1UEh5ZApPRElkRG5VbnFjSWQzVDhJSUY2RnNZUTV6NjgzTStmR3pQUUoyODQrZlBvNDR1RmQ3UDFCZkZxOUxzSWszRUFRCjdMTE1uYlVDZ1lCTDRRS28wUE1oR1p6bzJGcVd6VllsdGF3Yzc0NEhQVHhxelNBWXJXWmJNbzhwRm9tNDE4VlMKbHJEa3pjdzUraFBCT2QxVlNrdVdNYzJTQmRqODJvNmZNKytOUlI2Z0wrYnFxZytQWDcrWjZpUjlqR1ZObGp5VQpXaCt4OGdvcHVQMi9sT0F5U28vTVlQc1hqeTBtSXh3aGZuVTF2SUZOd055RjZTOXhOMFp1T3c9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo="
-  tls.crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURIekNDQWdlZ0F3SUJBZ0lRRUh6U3llcG51dFFHa1ZOanFSM2RFakFOQmdrcWhraUc5dzBCQVFzRkFEQWEKTVJnd0ZnWURWUVFERXc5b1lYSmliM0l0ZEc5clpXNHRZMkV3SGhjTk1qVXdOekUyTWpFd01EQXpXaGNOTWpZdwpOekUyTWpFd01EQXpXakFhTVJnd0ZnWURWUVFERXc5b1lYSmliM0l0ZEc5clpXNHRZMkV3Z2dFaU1BMEdDU3FHClNJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUM0WmlWdkx4aFpiMmJEcStHRVF3cXRvSkpSajFRUTRxN0UKdXQrakg0WTNDQWp6c3hKMTVtNnlwOERYcHhhTjdodHAvN3F0cVoxRG1HTE1zckxFbWVkVHVWdDdncEZYcXUxUgpQSnJvSUhqV3dONTVpckl0VmtaT0QydlU0RHVrS1JXdmFUNWw3K1VkNlM0Wjl6OXg1T0FaeDRqeGNKcEVvTWF4CnF6YnYxa2wyN01OSklPVE1qclVuZlVDdjdTN2RMRzl0eEdiTzd4TUduVk0wb0FxempIS2FYWExUaENVZWVqSE8KNXA3TTI1ZjJkd3JFZ3gyVmoxckdudy9RMVhEQ0hKa2tRNk1EQzhyWit0eFJVU2ZIdVJTaFhNRm5WLy9XK05jVwpVV0cxeGFvV0UzYmxXRjIzZU5mdzR0OTFyM3hsZnFiQWtSeHp2TFhtNE53VHBGcjhTMWMzQWdNQkFBR2pZVEJmCk1BNEdBMVVkRHdFQi93UUVBd0lDcERBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjREFRWUlLd1lCQlFVSEF3SXcKRHdZRFZSMFRBUUgvQkFVd0F3RUIvekFkQmdOVkhRNEVGZ1FVdGF5SzdOS2svWXNFUkVrWDZXSHNwUHlnY0tFdwpEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBTEFsbXBrSmhtZXpmMjhnajNHZUlIWGpFeXl1K3p6cWE3UmtXaGhJCjUxRkh0SkZQSnhydnVaNUxUQndxZ1hwd1RqZW5zdG9MUG5vcFNnZnNsbUNET0lpMEVEZ3QzcTNyMkZ5cUxvcWIKQm1FWk02VTF3SjQ2UjhzM0JUV0c4MGd5dXVXNkQvaVUxUTZMR1ZzZ0p6UnlPSGY5aDJGYXprK3pKNkdQV1Y2NApKblNOK29WRFlTamRVR3V4NDJZdmJNeXprSTBWbW5vcXJLRmdqOTg5RnhqK2d5cmNUVnlNY2VvckY3em9LSU1LCmZINDAwN1hQWGpIeDRkNnRseXk2OWhYUjhXc2M0em5FQXhwM0RKa3hNSlF5N0Jva2VYRnV0WWlxcDRKdXljWFAKNkdjMS9BamgvaFRFSy9WeldTb3lPQzAwMmI5WDZGUWFjYnlieFlDQ09kcVErUVk9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+  secret: "YURDSXNjTlBkSmhOZ2hWZA=="
+  tls.key: "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBNGJEZlovMi9LUisxZmtUL1BpM04veDNmeUtuMzZSTmZuU0w0bzVCUytjU0p2czdZCmpCWnlmeEV2dEN5RWFrU29wWklDWWhGSWgzaVlkaGwwZy9oQmNTek1VeWRuTUgzOUtEemZIbVNTUWJ3ald4eG4KYkVOT3Q4WnNBWnBvVnU4c2M5cVY5RFZQZ3BXQnRqN3NkUXJJTWxFRVpVNHNrSWoyOHFURnVXeWFZcHNUcGJ4RwpZZkpYdStDTFgxRy9xQjJkTzFoUWxwcllraWFiNEhHeGVUaFF3eWhBbjkyZW0yK2Jxd2ZwZVRXVWJtczlZT296CndXSms0eEVXS3hlK3Z2c1BwQW1mRGJGZTRuZEJGbUhFb1RiUTZ5TndyOUV4dlE0cmlueWpkTFlrMEQvV1VtSzkKZTlXL1d5bERrWG9yb0tpb3pkY3NzVHZDWklLUVVpSU9WdWkycFFJREFRQUJBb0lCQUFDTWM1T2lDTndJL3dPVgphTGs1bW9zc0szaTZneWNWdlNFdmMwTXQ1VzFTSFpHMll1aDdiaDUwcElESUdRY21YbXVqSlJJRnY4azYxa3N6Cm43RkJZaUsySTI1SUc0NUVrZEtiekIyVTlPYXh6QVZDTk9SQzlQNkJSTklOT3RSd3Z0TXVpWWpJZnV0MWpvZSsKMVdubUtXUExaYTFrR3NqL1g1dVNjdDF4VWF1WjVwU213UWovUWN4VUgxYU1hNm1UYXFlRVBrcmpUUktSNS83bQpXbEVPZXo1WjlHUXBmZFliMmFoZmhKV0FEUXRpMWNxMHhiS0trenVZbVRnUDQvOG83OS9oMnhjOFRibUZMNEtuCmZma25HdC9nQ0tzWmhsSG4rMTVLYjJvblhCTnRkMHRJWEkwL2IxN1kwK1Q3RXI2N0JvN2ExcmpGclVEMCtCZkcKQmM5RDl1RUNnWUVBN1RrUGNteUF1cHQ5cXpYNXlNUDI0akE0bjNJZ1A2VlVlYmRMZW82T2hLc3BjL0xoY1VHYgpQaDBJSS8yeU0zYVJ1UlFsREp2TFRqQkJ5dVZMbnZ1VFJLQnlHbUlvYXRSbHg4YVF4c3h2bEZFR1Qzbk5MSzRBCnVDeGhYNUUzOGkwbGI1aWxvZmxXeHZCTjBiM1F3YUhRN095SUNhYVNlcWJaK1cxdEZKYWVBbjBDZ1lFQTg0NGkKb2g5dDk4YnpzUDNXcHlVNnZoeGZMSk4vcHBSTzBHLzMzQVUwaFZKZXNlNjNnYzNiMkQrU2ZROUJZZ3E3ek1FVQpyY29SWjV6V25GU3MwbzFpdjNiZnlVZklYSjJQOGRTczRyOHIxWFMyQWpaTUtYNWZOcmJNMVNybGJnS2xDaG1hCjNqc052K1NUalFkTmdIZjY5YXAxOVpNeWFpaUp1YVNyVTkxbzFVa0NnWUI5WFN4R29nU2RtVktlU2xZSXZWY1oKVGJaK3ZNZENHMU03UjV5QjFoaUhFQlZHQzFNTWtVbERXQUJYVk5qNXpXMVJTODRRamJ5eFExdGhxQytBZ3g3ZQpvNVBwVVhwZWlvU0hRTzU5d01ndXIyc1FVU1FXdXBYeXZyRnUyY1doSEM2dWZSTDdPRk9kcXB6VmZPUjNqOVpqCmZ0U2RsUVBRQWFFcjZhSTl3U01iMlFLQmdRQ0NQTjVPUFdwTGxnclgrVlVnZWlzSVlCbVF0NnNLQThLRmVXcGMKTURoZWxxWm1sWlZ4aHdocGdjMHVyTXEweDdLWEVpU2hyaTFTYjY3ZlYvUTJmejV2emZ4cklNU0dxZ2JBTlk3aApqWUsrR1RQK3lOUS9XQUZJTzhZYXMxNk9Ua0c4dmVadnNicHZnNlpYUXJGeDRqYkR5WXhjYm9NRiszbHlXUmo0CnRxd0phUUtCZ1FDVzdVOEtlQ001eWZDYXNWMllVNVlDTU9lZWZ5L0RXTUdTWXgyM2JOZ3VJS3JBVzRtUVNVUGsKb2RLeWc0RTI4SWJ5SktjTHlnRk9qUU9FMHYzSEsvNFJyLytlZSs2eFQwWjEyVlJnVExGUFlZV0FsWStaaDRMOQpNL1hiY0lvL0p3UFdGUEllOGR1dXdUNEpueFVMQVYrUlNBTFVrSHFhSE05VFpwVVJnMXBaemc9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo="
+  tls.crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURJRENDQWdpZ0F3SUJBZ0lSQUxicHYyR0d4VGNiMUdueTZqQ2RBYUV3RFFZSktvWklodmNOQVFFTEJRQXcKR2pFWU1CWUdBMVVFQXhNUGFHRnlZbTl5TFhSdmEyVnVMV05oTUI0WERUSTFNRGN5TXpFeE5ETXdNVm9YRFRJMgpNRGN5TXpFeE5ETXdNVm93R2pFWU1CWUdBMVVFQXhNUGFHRnlZbTl5TFhSdmEyVnVMV05oTUlJQklqQU5CZ2txCmhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBNGJEZlovMi9LUisxZmtUL1BpM04veDNmeUtuMzZSTmYKblNMNG81QlMrY1NKdnM3WWpCWnlmeEV2dEN5RWFrU29wWklDWWhGSWgzaVlkaGwwZy9oQmNTek1VeWRuTUgzOQpLRHpmSG1TU1Fid2pXeHhuYkVOT3Q4WnNBWnBvVnU4c2M5cVY5RFZQZ3BXQnRqN3NkUXJJTWxFRVpVNHNrSWoyCjhxVEZ1V3lhWXBzVHBieEdZZkpYdStDTFgxRy9xQjJkTzFoUWxwcllraWFiNEhHeGVUaFF3eWhBbjkyZW0yK2IKcXdmcGVUV1VibXM5WU9vendXSms0eEVXS3hlK3Z2c1BwQW1mRGJGZTRuZEJGbUhFb1RiUTZ5TndyOUV4dlE0cgppbnlqZExZazBEL1dVbUs5ZTlXL1d5bERrWG9yb0tpb3pkY3NzVHZDWklLUVVpSU9WdWkycFFJREFRQUJvMkV3Clh6QU9CZ05WSFE4QkFmOEVCQU1DQXFRd0hRWURWUjBsQkJZd0ZBWUlLd1lCQlFVSEF3RUdDQ3NHQVFVRkJ3TUMKTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME9CQllFRkQwVWQzcTBxNUlIUnE0Q0ZLNVdOQnFkbTlOMQpNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUURGVUVpL05iKy9GSi9nTU9XaFgxOHN5bjNoZlFtQU14Y0t6L0R0CnZTYnRvM0gzQ3pzOWJ6NU1XeUZzMUFKak5vbEV0M2tqb1RaTGdyODNHSE5pS3duM2tJNTlzbGtUWGhBS0RVNm8KaFM3VUsrN1k5bThBN2t4UW5adlJ2VXhuRGNDUUhNL2kybG12UFdaYkROaTh0NWpESXhVS3NWdVplbWhDTHJoWQp0NEdvbDdiM0JFNkh0SmdFWVI2YmFoMWpYMVB4M2phTnc4S09CY2pWd1QwaG02TFp2MVE2QVRGTm1hNTR2a3hkCitxVFl5eDB0R0MveTBnVDY4OWhiQkFzRTlpa21rZ1FNMnJlb3BoZDdBb0VpTFJvc2lsRVpya3JIUzllUkpxL0EKZTArMVErSXZkSldHWEN2RTBSNXVsNnhjMTVFemV4ekxOWk1CMk9kc0dDNG1FVVg1Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
   HARBOR_ADMIN_PASSWORD: "SGFyYm9yMTIzNDU="
   REGISTRY_CREDENTIAL_PASSWORD: "aGFyYm9yX3JlZ2lzdHJ5X3Bhc3N3b3Jk"
-  CSRF_KEY: "ck1LZTBDTnJnTVlkUEdkbXRiOWFuMElOaGNmbU0xTUs="
+  CSRF_KEY: "Zm1qUExQSTc2OUN2b2ZLT1dHYzQwT1ZTU25iVlFsM0U="
 ---
 # Source: harbor/charts/harbor/templates/ingress/secret.yaml
 apiVersion: v1
 kind: Secret
 metadata:
   name: "prod-harbor-ingress"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -43,16 +43,16 @@ metadata:
     app.kubernetes.io/version: "2.13.1"
 type: kubernetes.io/tls
 data:
-  tls.crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURMRENDQWhTZ0F3SUJBZ0lRV2p2MVNQdHI3Nml1RjU2QzNZb3NpREFOQmdrcWhraUc5dzBCQVFzRkFEQVUKTVJJd0VBWURWUVFERXdsb1lYSmliM0l0WTJFd0hoY05NalV3TnpFMk1qRXdNREF6V2hjTk1qWXdOekUyTWpFdwpNREF6V2pBV01SUXdFZ1lEVlFRREV3dHZZMmt1ZEdwMGFDNWpiekNDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFECmdnRVBBRENDQVFvQ2dnRUJBTVlISEppNmxhbWR2czY5MVU5cThPLy90V0RCMysxbmFaeU94RzFxUldVVTVabHAKZGFCTVBKZkNjY3dGcXN2K0FGcXAxdHluZEc0R0IrNUVlZ1VER1BZRFo2N0JhS1pXNXRUWWlJcjlZeTQ1NGd1Mgo1MTVkanhHSDZKSkhDVkZ3RXgwSVdhcktaMnRCMytyc212YzVzdnFpUDRnQ2pXZk1yUTBsU2krbXV6MHNRaG5pCm9WZktOMUtmQ0crTmNaYmJKYTRVWHNPSnRrbXpPazZaeWNOZURxalVyV09WVjJFTW5hYnAyRUhhUEtWeVcwYVIKRXdRbktpN0FkUzlLT2E3Z0hzakFpZDFFckJIUStTYStxQkRxM1J5S0svZWJGTmUyeEx5M3FVWWtLd1ZDem5pSwpPVUN6K3BOYTdST3hEL1dTemZtQnhIbEhIMnhRQjQxQmZ5S2MzOEVDQXdFQUFhTjRNSFl3RGdZRFZSMFBBUUgvCkJBUURBZ1dnTUIwR0ExVWRKUVFXTUJRR0NDc0dBUVVGQndNQkJnZ3JCZ0VGQlFjREFqQU1CZ05WSFJNQkFmOEUKQWpBQU1COEdBMVVkSXdRWU1CYUFGSG0reDJkdWlFWDdta1h6ejNrcE45RjlQd2dGTUJZR0ExVWRFUVFQTUEyQwpDMjlqYVM1MGFuUm9MbU52TUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFDRzcrSCtVU3haMUlsMkk5VXVYZjdPCkdLSFk1amVleGZTMUQ3YUhQeFE1eFNYKzRLaXRYQUJOSXJBbENQekVmbyt6MHAvblV5bVZMbndTcnZuZVFMQTAKV2t4Nm1BdmpIbm1jS2tHZm1QL1lTWDd6K2ZKUEY3NU9pcFZ2c2dDTDE5d1hickFkKzhDc1dnWFhLbUhZNXhINQo3WllyeXRSRmpUMXpGWDhuR0gvZW5aUmRWOUdLMWU1RkJNMUxEYnF4dWxIODIycytBMVBWaVdKckgxWHVMMGFyClFWU0R6QXM0VzBicXlEUEI3VTNJc2p6TFZvd0JkeUJJcTJ5VkEyd2dudHZjQzB1UTBZSUdmZmwvclJsRlhNU24KMS94NC85ejM5b09lNVVHcSt3NllidFNzbHNOYmlNTkdWZXV6a2NvTFZhcjVsdmM5VU85M1hWVG80ZGw5NjZmcwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
-  tls.key: "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb2dJQkFBS0NBUUVBeGdjY21McVZxWjIrenIzVlQycnc3LysxWU1IZjdXZHBuSTdFYldwRlpSVGxtV2wxCm9FdzhsOEp4ekFXcXkvNEFXcW5XM0tkMGJnWUg3a1I2QlFNWTlnTm5yc0ZvcGxibTFOaUlpdjFqTGpuaUM3Ym4KWGwyUEVZZm9ra2NKVVhBVEhRaFpxc3BuYTBIZjZ1eWE5em15K3FJL2lBS05aOHl0RFNWS0w2YTdQU3hDR2VLaApWOG8zVXA4SWI0MXhsdHNscmhSZXc0bTJTYk02VHBuSncxNE9xTlN0WTVWWFlReWRwdW5ZUWRvOHBYSmJScEVUCkJDY3FMc0IxTDBvNXJ1QWV5TUNKM1VTc0VkRDVKcjZvRU9yZEhJb3I5NXNVMTdiRXZMZXBSaVFyQlVMT2VJbzUKUUxQNmsxcnRFN0VQOVpMTitZSEVlVWNmYkZBSGpVRi9JcHpmd1FJREFRQUJBb0lCQURFd1hRc1c5Y3dQRWZGYQp1QnlsRExvZ3cxWUljbTRQRE8zRmpNYzg2WVhsUGU3d2dqWlNHWTc4enJXR0J0bnErdjJLU0lQQTJLdm50WnFhCnlkQnE1NDFjWlNuRWd4RW1idW9aNnpqVEhnckNlQUsrNlJQSW01d1lMVTRBZFRFVWJMcitjdjk0alYzWUhCM0gKcmVxUkc0TWtRREd4cUp4Sy9BVlM2TzJUTmRsSXNBZlZFVVVvSDQ0VGhUZGk0K1A5VEdNaVg4UXhrOFZYcXFCdwpQVXg5TDdkd1FHc0VjbGJTUnBMTm5HcFlXc2dGSHBFQmsxcjBLYVBLOHk2REF0TXhTSHZTdEVSd0IyY05qbVJoCnUyT1ZKK3JkZ0dJWVBBak5BMnZoaE54UnJCcG9sazdFdnhKaUplZWJsb3hCbUM0WXNabUwyTzVLUENVV21mQ2QKZ0laNnRORUNnWUVBMUFuVjROaG1qZjNhZ2JWeHFZajFQeVBjS2gwektnakZlVUtwOGVrdXJZNzd6UmR0bUtaSwprUFNUSnpqQTVHOFJhdmRxOWtvQ2gxbkxJODdvT2pFS0puK09zVnJmS3NZYXNLcFErT0wzclN5RVNQWHp0MGJTCk9JcmlzYzZOYlZnZjZVbVN2Nkw3dUIzM3IwQ0J0d2IybmRlRVBTZFUrSXZIREJpQXY4R3dIWlVDZ1lFQTd4V2wKaXNKVDZLUFY4aUt5OHZURDZVVDNpdldyVTN3ZEd0cmIzQjVGSS9zU2cyNjQvNXdoVjNTc3lXbEVDY0FuWDRVYQpENEpYQXhzV0F4NGtqVlc3dm80T0VYTS9kNGRjVHhlRG9CZnc1aTd2YlNudStvcEpoUFpqcnFUQ3VDTzZzMS9UCmF4bGlSRGxDbjdCZHB5Z3ZKblVvTDJVay9JbkhxaTZMeS9HZE5uMENnWUJrbVNuODNBNkQ3VjFlenF2WGFHQWEKamJQbDB5YTBHYWMrNmE3aFUrVk9lSmprYStvV1UwYnJVTzREM0x3L1pLYVozanJFRU1iMFdsaXphM1hvTGQ0SAo5OXJHTUR2Uytsd3RWeERGbEVFM3l2Z1QrWVNnZnB3OE1VQnVaWFhaMjhhQUV1VHB3TFMyWEpsbmJ5NWJuSlVpCnU5NUVlVVdxQ2Y3c3NTOWNTdE40cFFLQmdEam1NUENXRVB3anlhNEhuZ2orUVlYSm1SUWtKWE1IN2JGUGR0V3IKQ285bW1HQlpRSVBzdDI2bDROMUtSUndBOUIzaWduSkFkYzdTYW1teGljZHRLUEpQd245YXF6Y2FLdGpUNHNwKwpDQ0h2OTZGR1FvNnp6STF0U2dudFFqNHFtcXRIMmZ2NkhZM1pCc2NVWlNWOEJjU2tTejBFV0VvVnpFUHZNZXdHCmc0RE5Bb0dBWHVMSTV2SEJ4OUsrTUlsOG9mYjdMb1FhR3AwcWlvQU9MZHhoOGptWkNmQVliSkhwWDdPOFpUWmwKTGN0ODVMRnhzVEJQM0ptUTQ2Y1ZmZVE3QTdTUGJlOVc4bGxFZHRSdWp4dU9ha0xxQWsyeUczNWRsM0pkdTVscwpHSHUvaTJ4MWhlaTRyclF1VklXR1BQN1F3Yi9FM1VURnBoVUhsZXZNWGlURDJqMm5oMzA9Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=="
-  ca.crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFekNDQWZ1Z0F3SUJBZ0lRUExyUFFFTnFZT1ZKNXZXNkF6d2hIakFOQmdrcWhraUc5dzBCQVFzRkFEQVUKTVJJd0VBWURWUVFERXdsb1lYSmliM0l0WTJFd0hoY05NalV3TnpFMk1qRXdNREF6V2hjTk1qWXdOekUyTWpFdwpNREF6V2pBVU1SSXdFQVlEVlFRREV3bG9ZWEppYjNJdFkyRXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCCkR3QXdnZ0VLQW9JQkFRRG1YOTBuMVdyeDJURGQwK0p1RnBOZjVXeU8xSG11dWxteFl2eWwxTGhFVVBTWjFFSXoKMVpRUlhzMUxSOCs5RnNWcVpoRFN0Q1pxMFJ6YmdjNVhTSmp3bElwQ3BkUmV2WG9SY1dvMXo4NlB6MVFNMTlOcApjODdTUjlIQk4yaXo0bHJUbzFKM29GNnNaenN5N1M5VU9MZHNJSU8xUXE4Rzh5YlV2WTdheC96N1lpRFZDU1pHCklaRjV6QXpLVnAydXFzb0tYNHRPdVBwRmZZTjJlaE9sbmoxWmQ5OUNBQmM0WS9rZ3dDbEFOY2dvVStWNjkvR1EKeENIQVErekNDdTlLcjcreWo1SFJCQzlGQkFLUER4NlBDREJrUXMxZ2toL01mU3BtVVVDek02RTZVeXhLSTdCWgpZUWZRYXFFeW5PaHVZQUxuUDUvcmxialUwQzhEajZENkpxRC9BZ01CQUFHallUQmZNQTRHQTFVZER3RUIvd1FFCkF3SUNwREFkQmdOVkhTVUVGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVIQXdJd0R3WURWUjBUQVFIL0JBVXcKQXdFQi96QWRCZ05WSFE0RUZnUVVlYjdIWjI2SVJmdWFSZlBQZVNrMzBYMC9DQVV3RFFZSktvWklodmNOQVFFTApCUUFEZ2dFQkFDczhvRTZkMVJpNFFMaWN5VVBCMWkzaUcremtKQjZrbGNrUDk3SG1FTVNJTTB0T1NEbTRpekFICkhlUm5WMkxQaEt2NmM3ank3VkFDek9IM2pPNzJRREpzcXQ3ekYwLytLK3M0N3Nua1dBYVo4QVpKcjBkSm9zU2kKRDlRbDNxSFJiN0hwanRtVDN6ekV3NXdmRXVEUEdXNWpUc0kzdjVHOVArVGVib0tWWXI3ekx3Q2QwdGFQNzNMbApuK0FDK0xGK0MyYTEzMnNTeE5XYVgra3djdEpXcUNuU3Zob2VoNk14RWxGSW9EbDk3TFRZQWU3aFoyTzU4b09lClFxelpmNTJVRzJuMHdPUnA3bkFJVlZjQjRFckVYQVRDaHByamtyR1JFRGorc0Z6enJGVFc1RmQrM3BEWFUyVEkKWDRPZUVJWkMvRk9tNlJnRm9MWUhsNDBWdGRSZVhLOD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+  tls.crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURMRENDQWhTZ0F3SUJBZ0lRRWMrYlFZMkRHTlZYcEhKeDBjS21iekFOQmdrcWhraUc5dzBCQVFzRkFEQVUKTVJJd0VBWURWUVFERXdsb1lYSmliM0l0WTJFd0hoY05NalV3TnpJek1URTBNekF3V2hjTk1qWXdOekl6TVRFMApNekF3V2pBV01SUXdFZ1lEVlFRREV3dHZZMmt1ZEdwMGFDNWpiekNDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFECmdnRVBBRENDQVFvQ2dnRUJBTktmQU0xU1F1bXhIbUpwc3A2RWM1L3VKNktya2IrUDQxUjV3VE1zK2tJdlc3eWkKTVFZMFlTWGtHQUd1ZnNEbmJjY1pObUVydmFLOVZZclRJcXovd3lBUEx0Z2gvdlFWa0tTdThMMHg0Q0gzSjZkTgpucFp0dURmbUtOcG1wWUdKUXBoTFcydUpZVzRZMmtqcjUySUU4WXYzY1RmMXZuRW45RHRkSjlJV1FlVTJkUDhvCmJjUHBDYTQvS2l0K3BrdGxiYmU1L0JGbzEwODFLekpjOVJUN3FrWVluNEdRSEJYbVFBK2FibzJNbUhMSnpieEgKNTl3bWpZc0VmVk9XNytDUHpQa2cwNmdHR3RUUXd3WTVGUFpXQmViQjNUcWdzRk5Kb3F2VmwvbE9NU21Eb0VSMApmbHRveDZoRHBUQ3YyTWlHUnJhVUlRMjhZclpNKzl5ZUdLQ052OU1DQXdFQUFhTjRNSFl3RGdZRFZSMFBBUUgvCkJBUURBZ1dnTUIwR0ExVWRKUVFXTUJRR0NDc0dBUVVGQndNQkJnZ3JCZ0VGQlFjREFqQU1CZ05WSFJNQkFmOEUKQWpBQU1COEdBMVVkSXdRWU1CYUFGRVBmNGloNjQzM1RhUWNHeGRtOFhIam91djMrTUJZR0ExVWRFUVFQTUEyQwpDMjlqYVM1MGFuUm9MbU52TUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFCTmlhNkNVTklSKzZ3c0JXUCt0aEZsCnFpSUxwL2dVc3BuLzB3c1VwcDY4VDh4aWRVcWZ3SXU5SjhTQ2VndTVtdWJ2VzhwdzM3NUgyZ215WVduQkdpL0gKaGkxM040ZWxqUjI1YXdGV0N6TkZabXlWeFlMOWJwNmthTGhaamRvV2Jsd1BZblIreDlQRVV0KzlQRU1XZjhGUAorMTZaNVFZWTRaVzlCOU54bVMxNFRUR2dEc3NkYTNqcFQwalRCTVpNY3MrbXF4UVNqRW9jTm9La001N2RBZkJhCjl0ajUwVTNXYlh6TkNnTjk3emV2N1VrRytiRk1ycFpNM1FrT3ZTVm1UNUtPWWJHZXVkY3ZmNGQ3UDZwNEd1eTQKN2paa1ozNmJ5b29YanI4UEZKLzUweVlsN3NlYVVGUE9xbWJEMFJwTG94RE1WMTk1QkRmLy81MEtsV2o3bWtCYgotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+  tls.key: "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBMHA4QXpWSkM2YkVlWW1teW5vUnpuKzRub3F1UnY0L2pWSG5CTXl6NlFpOWJ2S0l4CkJqUmhKZVFZQWE1K3dPZHR4eGsyWVN1OW9yMVZpdE1pclAvRElBOHUyQ0grOUJXUXBLN3d2VEhnSWZjbnAwMmUKbG0yNE4rWW8ybWFsZ1lsQ21FdGJhNGxoYmhqYVNPdm5ZZ1R4aS9keE4vVytjU2YwTzEwbjBoWkI1VFowL3lodAp3K2tKcmo4cUszNm1TMlZ0dDduOEVXalhUelVyTWx6MUZQdXFSaGlmZ1pBY0ZlWkFENXB1all5WWNzbk52RWZuCjNDYU5pd1I5VTVidjRJL00rU0RUcUFZYTFORERCamtVOWxZRjVzSGRPcUN3VTBtaXE5V1grVTR4S1lPZ1JIUisKVzJqSHFFT2xNSy9ZeUlaR3RwUWhEYnhpdGt6NzNKNFlvSTIvMHdJREFRQUJBb0lCQUVvSmpiRWZPUmxINHl2cQpCdGwxS3VYdHhDNEpESWRmcjZSSzFuREVYMFp6dWxZeFYzVmNaVWY2Q2J4Um1BbjhjRmo4RW1NUENxN1J5bWV0CjkzTUR4eFlXY0R1V203WTJmRzEvZDIyeVFoeitjZ2g4SHdLM0YvcENaRnI5bVRGVFREOFh3aytuYjhIUlo2NFoKaXZFb1ZyYUNhV0NuK0dWemk0VndwaVpTSDZEUUkvWFhpZXlLNkl4bzZDdUZSZUVFWGlPcFJ2TURvZHdTQSs5OAovOWVabWdDNHU1S28rR3VCYWdYRDVNUFdMNXFaNXJWd0dJWElCSnM1TW1mK3ZES1Z5VXNPSGNiTDZzalhmWjZTCjMyQzNJK2JJT2wxa0ZEQ0JCY3VqRDhET1R1RmVyQTl1ejlCanJMczNqMW5oNTNhNU8wZ001YTR3T25VWWR0UTMKbXRoL0dxa0NnWUVBNzExMmd4Q20zc0tteU82S0loS1NLK1ZkeXNrZnFnS0c2ZHNlRytaWmxGSzFuZlFTTGJ1awpmVXpqVERkYUVUU1JWWWFxV2ZnWWR4UGI1K3VJN3YwcGxRUlR1cG1YaHJKb0FzRFp6ODRWZGRIcm1YSTFXTU96CmN6QWxLb2xtTEk1Zk51bnBLQWVGbHc2SjFzTW1lc3ZmVjNGaVJCUDk1VUtHdXZKYzUrWnM0c3NDZ1lFQTRVSW8KSjRvTTRLWElXR05ReERuSE5EMzlTVnFkWFlJUXpnUmpJY2lMZjdLUGQvNlpJS2lGMURkUDhkK1M3YVU1NU9EcAorc3I4TlpQSHpoVXNBcGlVaXFmbnFlcmhxWmJrRjdmNU8xbUI0VFV0ak9hT2VRVG5FQ3E0aW10bVM5bkZTbmRCCkh2RVExUlNsb3dIVDN4SmRCczJVYnJPWDByZ1E2QzVpajFkOWpoa0NnWUJCVUxTVkFRYzN3OCsxQm5wRTMrSm8KL2ZhQTdpNm91blhML0ZHVDlXQStPKzk1QVcrd2NRSnFlbitQZlk4aklNQURvWEo4aUZsTXJPdVZ0a3l3UWY2Rgp2aCtHeklCdmJlRTUxeHZZTzNqWnBJVndZcHl4OHZ6VmtxNmhrOHFBbi96VlJEQ3VEcGRpWjhJdkN5TkY0TG01CjU2T1R4Z3pDOFV0SVdmZ0dBM2QwendLQmdIMFI0b0d4b056S3I2YUQza0JWWkVtWmNaemM5eXNJSUpTQzB4ZmEKNWJtTlJ5TjA5VWl3eVQyL1NHQWZwdERVUUlUWWJKR1hTdG5rcDdmQkFhS2ZYVHB2WjYxc2dNZE14SEIyOGFjRwpWNXJYaitiL3pITmRTWDRzZWpKQTE1ZWQzbkV1TGJZa1d4ZzBVcE5qWEdRcktnT3crWTFOb2lxWmtLbVp0NWVuCkdFdGhBb0dCQUpYaVVJN25IM2JodERBZFdRT2RscDNnYkhrVG9iRTdvL2hJT3pDUmtxOWl0QnJOazYwWHI3ZmcKMG5vdkp6TEpEWTQ4V3pQTjJvTlU4WElkU2Q4Zng1eGhiZEd2d3JGWVNiRTdhQTROUXNta3B5MTNIZXN5bFo4LwpvQTlqRFRlS1dBZlN0REtIM0Nac2Q3dkJCOUN5SEk0Qjk4dHg4cTZRQ1huNXpTOU5zR203Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=="
+  ca.crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFekNDQWZ1Z0F3SUJBZ0lRSWp6dlNzbVBWMnBXM0pvd0VLRmhUekFOQmdrcWhraUc5dzBCQVFzRkFEQVUKTVJJd0VBWURWUVFERXdsb1lYSmliM0l0WTJFd0hoY05NalV3TnpJek1URTBNekF3V2hjTk1qWXdOekl6TVRFMApNekF3V2pBVU1SSXdFQVlEVlFRREV3bG9ZWEppYjNJdFkyRXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCCkR3QXdnZ0VLQW9JQkFRQ1VHYW03OVVOcVBBUHdjcFJYWW43RFlsbk9SMVNRRm1pWEpvRW12bzdJd3Z3THFWSWEKYmhsdmFzQzJNNElXVXdWQm04UUZ4S1dkdmMyclUyRzBCd3NUSmRzMHR6TGFKNGlhWURNTXFoVFh2Tm1GWU10ZgpiQTFveWljVWlaVjVtbUV1cS9KSk82R29CMWJUUmVQb3hjN1Z4VHNHbTBjVGNGTURjRjNVUEt0aGtBZkIwQWtCCkIwdmViWlE5eW82UitQRDAwUldBL1hLc3Y1S2xrdU93YXg4R3JhV1c5ZThTc3A1S1doOHE5b3prY0s3bmkxREcKbzFQVk1mM3JzdzhFOHV6ZlFYT0ZOdWZrcG1ZZ01kZCtCUjRUb2ZFdW1mTzZDVVh1SndLZGtnT2c4YzFtLytRcgpJZkVLVE9CMkdRMUdoeHI4SDZoSUpYQ1pjb2RqTGJNKzJNYm5BZ01CQUFHallUQmZNQTRHQTFVZER3RUIvd1FFCkF3SUNwREFkQmdOVkhTVUVGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVIQXdJd0R3WURWUjBUQVFIL0JBVXcKQXdFQi96QWRCZ05WSFE0RUZnUVVROS9pS0hyamZkTnBCd2JGMmJ4Y2VPaTYvZjR3RFFZSktvWklodmNOQVFFTApCUUFEZ2dFQkFDMmxsa3h1MzM0UEx5Q25zSTRLSDMwd1gvSFBPaWluMklheFdZTk81TEp2cFNMQUhQNzNvMVd3CmZ1Y0xCVjJqODF3cHVkNTBjNmFoSUZZRGZUb2RwZERraE5ublFEdEQzeEx4OFNadDFBZDlkRWl2aFByNFBhWmYKSEFBWlovWWdZZWQvdnNIOWhQVExsMU44WEhmeURBQzQyWnNoNFE5c1FFT0UwdkY2VUh1SXl6T1FhdXIwSlR0Vgp1UndXT2xnWTBvU3RZRVhYdHhRNVU0MGtpZUQzVkZ0TFM3c1R0Rm54UFAveUFDU0lTb0RnMldYWkdRUUUrN2VsCmV3ZzZ5eGhHc0xZMEFkeVBpZFl4U3JTUmMvbXV2WTFlRXIxcFZYSnZvQ2JFSlgxbnZTZ0JJVTdJOENmakh4U1QKWXZkTngwemZudTdnbkY3WlFncm15MFVIOEdwNDJYbz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
 ---
 # Source: harbor/charts/harbor/templates/jobservice/jobservice-secrets.yaml
 apiVersion: v1
 kind: Secret
 metadata:
   name: "prod-harbor-jobservice"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -65,7 +65,7 @@ metadata:
     app.kubernetes.io/version: "2.13.1"
 type: Opaque
 data:
-  JOBSERVICE_SECRET: "Snc5ZjdhdWM1V2hsVjhPNQ=="
+  JOBSERVICE_SECRET: "cndJUnJIVmJoa1Rqa2VVdA=="
   REGISTRY_CREDENTIAL_PASSWORD: "aGFyYm9yX3JlZ2lzdHJ5X3Bhc3N3b3Jk"
 ---
 # Source: harbor/charts/harbor/templates/registry/registry-secret.yaml
@@ -73,7 +73,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: "prod-harbor-registry"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -86,7 +86,7 @@ metadata:
     app.kubernetes.io/version: "2.13.1"
 type: Opaque
 data:
-  REGISTRY_HTTP_SECRET: "c05xZ25EVWhpQW9ZTEVadw=="
+  REGISTRY_HTTP_SECRET: "N0g4V2NkYkcwODIyUzFkbw=="
   REGISTRY_REDIS_PASSWORD: ""
 ---
 # Source: harbor/charts/harbor/templates/registry/registry-secret.yaml
@@ -94,7 +94,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: "prod-harbor-registry-htpasswd"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -107,14 +107,14 @@ metadata:
     app.kubernetes.io/version: "2.13.1"
 type: Opaque
 data:
-  REGISTRY_HTPASSWD: "aGFyYm9yX3JlZ2lzdHJ5X3VzZXI6JDJhJDEwJHhGVWhPYy5HS2pxOTlDa2x6MzBrek9DV29ycHNwWDF5U3owdEg4WHB5VzE3YmNiWHVuelNp"
+  REGISTRY_HTPASSWD: "aGFyYm9yX3JlZ2lzdHJ5X3VzZXI6JDJhJDEwJHVWNk5FemZRM2tQTjQ1SDhFRk5POC5WTmlVMGZxS0dmenc4ejczRGFadzZsQ2tTbjdwLzB5"
 ---
 # Source: harbor/charts/harbor/templates/registry/registryctl-secret.yaml
 apiVersion: v1
 kind: Secret
 metadata:
   name: "prod-harbor-registryctl"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -133,7 +133,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: prod-harbor-trivy
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -154,7 +154,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prod-harbor-core
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -210,7 +210,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "prod-harbor-jobservice-env"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -241,7 +241,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "prod-harbor-jobservice"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -292,7 +292,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "prod-harbor-portal"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -344,7 +344,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "prod-harbor-registry"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -416,7 +416,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "prod-harbor-registryctl"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -434,7 +434,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: prod-harbor-jobservice
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   annotations:
     helm.sh/resource-policy: keep
   labels:
@@ -461,7 +461,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: prod-harbor-registry
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   annotations:
     helm.sh/resource-policy: keep
   labels:
@@ -522,7 +522,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: prod-harbor-core
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -548,7 +548,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: "prod-harbor-jobservice"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -574,7 +574,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: "prod-harbor-portal"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -599,7 +599,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: "prod-harbor-registry"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -627,7 +627,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: "prod-harbor-trivy"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -701,7 +701,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prod-harbor-core
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -737,9 +737,9 @@ spec:
         component: core
         app.kubernetes.io/component: core
       annotations:
-        checksum/configmap: e5f3dc28a9b4d6214e0bd6b021799dd299d74ee0dac9dfae0e582105af11e7b1
-        checksum/secret: f275768ba0363b484d9cd1a26dec4ad8f25d4c00b1a14a5109f20df8d9c4fa5e
-        checksum/secret-jobservice: 1d6badff129ca2255bf0625f4b9db34c84486a7469fa5508151d63b64b97a988
+        checksum/configmap: a7bed2a8c2e91ae9a06022c5a165f0fa497556e3064840568d8300d98875c705
+        checksum/secret: 7a6d00ec54ae2634180995cc1ec95cbdec130c1386367f50f488e53d49c748ea
+        checksum/secret-jobservice: 6d8d8730371d59cf82b3935149732a3e2e18233757d71340ce313051dd9a359f
     spec:
       securityContext:
         runAsUser: 10000
@@ -847,7 +847,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "prod-harbor-jobservice"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -885,10 +885,10 @@ spec:
         component: jobservice
         app.kubernetes.io/component: jobservice
       annotations:
-        checksum/configmap: 1b5200e4fbdf95ebb487140ff62c8eb7e66e45475186a98cc9fa390eaf9b13c5
-        checksum/configmap-env: a3c18d4cf4674e8460b92a0a413c6bed85a97471353f21e86dc3594463b87750
-        checksum/secret: c152fbc900f566d5ee4164b617d259556efcc59ab1e5b418e5ad084e163c41f0
-        checksum/secret-core: 269cd3b5d10d7f3c5d4f9154649275abc72f1f38ed643154ca1eb6c7ed974ffb
+        checksum/configmap: 1c6d7a871a8d11eca7c271f997ded006e1b868d6243d62d23ac34f7ebd04c984
+        checksum/configmap-env: 926fe4b48624217d1fb891d7a0de61aa6c891b5bd2a1a6a995da2ab7d2e5952d
+        checksum/secret: 0034d081f0c93fa530e4a39e6577385e846993d2d419bc819f66204a50cf1573
+        checksum/secret-core: c70056d9792d29197d9947d234c9acf02005ee2ae9b2c6ce779177b5c8b07598
     spec:
       securityContext:
         runAsUser: 10000
@@ -957,7 +957,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "prod-harbor-portal"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -993,7 +993,7 @@ spec:
         component: portal
         app.kubernetes.io/component: portal
       annotations:
-        checksum/configmap: 3aa9e921bed1eafaeef26cb2b462ef38acd23d27246278234c67d9c49a7de264
+        checksum/configmap: 38819e03e83ae4bb83145f8713b7b9587201ec2c3475a698b24eed1f19def8a0
     spec:
       securityContext:
         runAsUser: 10000
@@ -1044,7 +1044,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "prod-harbor-registry"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -1082,10 +1082,10 @@ spec:
         component: registry
         app.kubernetes.io/component: registry
       annotations:
-        checksum/configmap: 741a1e20560e5700b5c548912163fdc95d207976c6839c9e57e07eadb5b39896
-        checksum/secret: de1a13dcde9aaf6fc2b21f8f52330e172ae28f8bb9b68b71d363d446751b8f0f
-        checksum/secret-jobservice: 62bcdf32fcd3076fe86a252462444e5b119563509f6b65ba3ad6cc8634a103b5
-        checksum/secret-core: 8592453ea9584e9dd8ff7bbf28a1057125fa5be4dad1b31552a9288844926fb7
+        checksum/configmap: f2e0da0e00204c5f88a1deab1b6193712e75bf373070f762ca14bdfa306abe55
+        checksum/secret: 955627a72fa8580e6c84872114d873321310528b5901af9db7d24fc835452648
+        checksum/secret-jobservice: cd1f718ca0ef413673057cbaab12d73f29f4b21022e3c697cad1d0e685d26ce9
+        checksum/secret-core: f1d8fdbea885561228613a764d02f70074bd0188c20f646fdc1e7153a6eefd41
     spec:
       securityContext:
         runAsUser: 10000
@@ -1230,7 +1230,8 @@ spec:
       labels:
         app: db
     spec:
-      
+      imagePullSecrets:
+        - name: registry-harbor-dockerconfigjson
       serviceAccountName: 
       containers:
         - name: db
@@ -1317,7 +1318,8 @@ spec:
       labels:
         app: redis
     spec:
-      
+      imagePullSecrets:
+        - name: registry-harbor-dockerconfigjson
       serviceAccountName: 
       containers:
         - name: redis
@@ -1364,7 +1366,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: prod-harbor-trivy
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -1400,7 +1402,7 @@ spec:
         component: trivy
         app.kubernetes.io/component: trivy
       annotations:
-        checksum/secret: 814dceeb395b932a24079e7cea0a739156be224fd859f75695ff9ca55a722029
+        checksum/secret: eae7fe97d938a06c41f97d99800aee94b871ae27e138a58588a2a8c9245bc4a7
     spec:
       imagePullSecrets:
         - name: registry-harbor
@@ -1529,7 +1531,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: "prod-harbor-ingress"
-  namespace: "kargo-harbor"
+  namespace: "harbor"
   labels:
     heritage: Helm
     release: prod
@@ -1592,6 +1594,29 @@ spec:
             port:
               number: 80
     host: oci.tjth.co
+---
+# Source: harbor/charts/helm/templates/dockerSecret.yaml
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: registry-harbor-dockerconfigjson
+  namespace: harbor
+spec:
+  refreshInterval: 15s
+  secretStoreRef:
+    name: vault-backend
+    kind: ClusterSecretStore
+  target:
+    template:
+      type: kubernetes.io/dockerconfigjson
+      data:
+        .dockerconfigjson: "{{ .CONTENT   }}"
+    name: registry-harbor-dockerconfigjson
+  data:
+  - secretKey: CONTENT
+    remoteRef:
+      key: container-registry/dockerconfig.json
+      property: CONTENT
 ---
 # Source: harbor/templates/docker_secret.yaml
 apiVersion: external-secrets.io/v1
